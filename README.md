@@ -12,9 +12,9 @@ The script has been tested running under Python 3.6.9, with the following packag
 ## Synthetic experiments
 Here is an example to train the model on synthetic experiments: 
 
-``
+```
 python train_EIGNN_chains.py --num_chains 20 --chain_len 100 --seed 14
-``
+```
 
 `num_chains` and `chain_len` should be changed accordingly. 
 
@@ -25,18 +25,18 @@ We provide a few trained models on cornell datasets for demonstration purpose.
 See `saved_model`. 
 To evaluate, run the command: 
 
-``
+```
 python eval_EIGNN_heterophilic.py --dataset cornell --epoch 10000 --lr 0.8 --weight_decay 5e-06 --gamma 0.8 --idx_split 1 
-``
+```
 
 `idx_split` should be changed accordingly. There are 10 data splits as used in [Geom-GCN](https://github.com/graphdml-uiuc-jlu/geom-gcn).
 
 ### Train the model 
 Here is an example to train the model on university datasets, 
 
-``
+```
 python train_EIGNN_heterophilic.py --dataset cornell --epoch 10000 --patience 500 --lr 0.8 --weight_decay 5e-06 --gamma 0.8 --idx_split 0 
-``
+```
 
 This implementation is developed based on [the original implementation of IGNN](https://github.com/SwiftieH/IGNN). We thank them for their useful implementation.  
 
